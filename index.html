@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="todo">
+    <button id="summitButton">Add ToDoList</button>
+    <ul id="result"></ul>
+
+    <script>
+        const summitButton = document.getElementById("summitButton");
+        summitButton.addEventListener("click", addTodo);
+        function addTodo() {
+            let todo = document.getElementById("todo").value;
+            let ul = document.createElement("ul");
+            ul.innerHTML = `<li>${todo}</li>`;
+            let result = document.getElementById("result");
+            result.appendChild(ul);
+            
+        }
+    </script>
+</body>
+</html>
